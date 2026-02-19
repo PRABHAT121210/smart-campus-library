@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Campus Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>📚 Smart Campus Library</h1>
+    <p>Digital Library Management System for Engineering Students</p>
+</header>
+
+<section class="stats">
+    <div class="card">
+        <h3 id="totalBooks">0</h3>
+        <p>Total Books</p>
+    </div>
+    <div class="card">
+        <h3>5</h3>
+        <p>Branches</p>
+    </div>
+    <div class="card">
+        <h3 id="borrowCount">0</h3>
+        <p>Borrowed</p>
+    </div>
+</section>
+
+<div class="container">
+
+    <div class="controls">
+        <input type="text" id="search" placeholder="Search books..." onkeyup="updateDisplay()">
+
+        <select id="branchFilter" onchange="updateDisplay()">
+            <option value="All">All Branches</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="MECH">Mechanical</option>
+            <option value="CIVIL">Civil</option>
+            <option value="EEE">EEE</option>
+        </select>
+    </div>
+
+    <h2>Available Books</h2>
+    <div id="book-list" class="grid"></div>
+
+    <h2>Borrowed Books</h2>
+    <div id="borrowed-list" class="grid"></div>
+
+</div>
+
+<footer>
+    © 2026 Smart Campus Library | Mini Project
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
